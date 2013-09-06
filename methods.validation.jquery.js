@@ -1,3 +1,8 @@
+
+/*
+*Created	:	Sep-05-2013
+*Author		:	Sarath
+*/
 //Phone number validation 
 // +91 0000 -8888-22
 jQuery.validator.addMethod('phone',function(phone){
