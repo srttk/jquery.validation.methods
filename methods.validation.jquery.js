@@ -30,4 +30,8 @@ jQuery.validator.addMethod("minWords", function(value, element, params) {
 
 jQuery.validator.addMethod("alphanumeric", function(value, element) {
         return this.optional(element) || /^\w+$/i.test(value);
-}, "Letters, numbers, spaces or underscores only please");  
+}, "Letters, numbers, spaces or underscores only please");
+
+jQuery.validator.addMethod("rangeWords", function(value, element, params) { 
+    return this.optional(element) || value.match(/\b\w+\b/g).length >= params[0] && value.match(/bw+b/g).length < params[1]; 
+}, $.format("Please enter between {0} and {1} words."));
