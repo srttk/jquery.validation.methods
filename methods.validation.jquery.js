@@ -16,3 +16,14 @@ jQuery.validator.addMethod('human_name',function(name){
 	var v_hn=/^[A-Za-z \]{}[A-Za-z]{1,}$/;
 	return v_hn.test(name);
 });
+
+//Max Words
+//Code from : https://code.google.com/p/jqueryjs/source/browse/trunk/plugins/validate/additional-methods.js?r=6307
+jQuery.validator.addMethod("maxWords", function(value, element, params) { 
+    return this.optional(element) || value.match(/\b\w+\b/g).length < params; 
+}, $.format("Please enter {0} words or less."));
+
+//minWords
+jQuery.validator.addMethod("minWords", function(value, element, params) { 
+    return this.optional(element) || value.match(/\b\w+\b/g).length >= params; 
+}, $.format("Please enter at least {0} words.")); 
