@@ -27,3 +27,7 @@ jQuery.validator.addMethod("maxWords", function(value, element, params) {
 jQuery.validator.addMethod("minWords", function(value, element, params) { 
     return this.optional(element) || value.match(/\b\w+\b/g).length >= params; 
 }, $.format("Please enter at least {0} words.")); 
+
+jQuery.validator.addMethod("alphanumeric", function(value, element) {
+        return this.optional(element) || /^\w+$/i.test(value);
+}, "Letters, numbers, spaces or underscores only please");  
