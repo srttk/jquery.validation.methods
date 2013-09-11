@@ -8,14 +8,14 @@
 jQuery.validator.addMethod('phone',function(phone){
   var vp=/^[+\(\)\[\]]*([0-9-][ \(\)\[\]]*){6,15}$/;
 	return vp.test(phone);
-});
+},$.format("Please enter valid phone number"));
  
  
 //Human name {Charecters and spacees only}//
 jQuery.validator.addMethod('human_name',function(name){
 	var v_hn=/^[A-Za-z \]{}[A-Za-z]{1,}$/;
 	return v_hn.test(name);
-});
+},$.format("Please enter valid name"));
 
 //Max Words
 //Code from : https://code.google.com/p/jqueryjs/source/browse/trunk/plugins/validate/additional-methods.js?r=6307
