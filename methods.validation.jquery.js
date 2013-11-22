@@ -1,7 +1,7 @@
 /*
 *Created	:	Sep-05-2013
 *Author		:	Sarath
-*Updated	:	Nav-15-2013
+*Updated	:	Nav-22-2013
 */
 //Phone number validation 
 // +91 0000 -8888-22
