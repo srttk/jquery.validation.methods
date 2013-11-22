@@ -7,7 +7,7 @@
 // +91 0000 -8888-22
 jQuery.validator.addMethod('phone',function(phone){
   	if(phone.length>1){
-		var vp=/^[+\(\)\[\]]*([0-9-][ \(\)\[\]]*)+/;
+		var vp=/^[+\(\)\[\]]*([0-9-][ \(\)\[\]]*){1,}$/;
 		return vp.test(phone);
 	}
 	return true;
