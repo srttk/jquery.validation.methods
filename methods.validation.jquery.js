@@ -38,3 +38,12 @@ jQuery.validator.addMethod("alphanumeric", function(value, element) {
 jQuery.validator.addMethod("rangeWords", function(value, element, params) { 
     return this.optional(element) || value.match(/\b\w+\b/g).length >= params[0] && value.match(/bw+b/g).length < params[1]; 
 }, $.format("Please enter between {0} and {1} words."));
+
+/*
+validate date (MM/DD/YYYY)
+^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$
+*/
+jQuery.validator.addMethod('date_mmddyyyy',function(date){
+	var v_hn=/^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$/;
+	return v_hn.test(date);
+}, "Invalid date format");
