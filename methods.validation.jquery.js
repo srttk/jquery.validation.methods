@@ -47,3 +47,19 @@ jQuery.validator.addMethod('date_mmddyyyy',function(date){
 	var v_hn=/^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$/;
 	return v_hn.test(date);
 }, "Invalid date format");
+
+
+
+/*
+currncy_format
+ 100.00
+ 100.0
+ 100
+*/
+jQuery.validator.addMethod('currency_format',function(value,element,params){
+	if(value.length==0){
+		return true;
+	}
+	var currency_fmt=/^(([^0]{1})([0-9])*|(0{1}))(\.\d{1,2})?$/;
+	return currency_fmt.test(value);
+},"Invalid curency format");
