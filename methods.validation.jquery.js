@@ -51,6 +51,8 @@ jQuery.validator.addMethod('date_mmddyyyy',function(date){
 
 
 /*
+Jan-22-2014
+Currency validation 
 currncy_format
  100.00
  100.0
